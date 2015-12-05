@@ -17,7 +17,6 @@ def bfs(root):
 
     while not q.empty():
         current = q.get()
-        #print current.key
 
         if current not in visited:
             for child in current.children:
