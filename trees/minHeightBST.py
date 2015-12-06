@@ -7,7 +7,7 @@ ideas: use binary search logic to insert nodes?
     output: BST
 '''
 
-class Node(object):
+class BTNode(object):
     def __init__(self, key):
         self.key = key
         self.left = None
@@ -26,7 +26,7 @@ def minHeightBST(nums, imin, imax):
 
     middle = (imin + imax) / 2
 
-    node = Node(nums[middle])
+    node = BTNode(nums[middle])
     print node.key
     node.left = minHeightBST(nums, imin, middle-1)
     node.right = minHeightBST(nums, middle+1, imax)
